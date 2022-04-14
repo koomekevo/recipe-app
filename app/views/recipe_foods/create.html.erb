@@ -1,0 +1,23 @@
+<div class="">
+  <div class="">
+    <h1>Add to my Shopping List...</h1>
+  </div>
+
+  <%= form_with model: @general_shopping_lists, url:general_shopping_lists_path, scope: :general_shopping_list, method: :post, data: { turbo: false }, class: "food-form" do |form| %>
+    <div class="">
+      <%= form.label :name %>
+      <%= form.text_field :text, class: "form-control", required: true %>
+    </div>
+    <div class="">
+      <%= form.label :quantity %>
+      <%= form.text_field :text, class: "form-control", required: true %>
+    </div>
+    <div class="">
+      <%= form.label :price %>
+      <%= form.text_field :text, class: "form-control", required: true %>
+    </div>
+    <div class="submit mt-3">
+      <%= form.submit "submit" %>
+    </div>
+  <% end %>
+</div>
