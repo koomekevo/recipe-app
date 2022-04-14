@@ -1,0 +1,23 @@
+<div class="center recipe">
+<div>
+  <h1>My list of Recipes</h1>
+</div>
+<div class="button">
+<button class="add">
+  <%= link_to 'Add a new recipe', new_recipe_path %>
+</button>
+</div>
+<% @recipes.each do |recipe| %>
+  <div class="">
+    <div class="card">
+      <div>
+        <h1><%= link_to recipe.name, recipe_path(recipe) %></h1>
+      </div>
+        <p><%= recipe.description %></p>
+      <div>
+        <%= button_to 'Delete', recipe_path(recipe.id), method: :delete, class:'danger' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

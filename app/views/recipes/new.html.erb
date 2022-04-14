@@ -1,0 +1,30 @@
+<div class="new center">
+<div >
+    <h1>My New Recipe</h1>
+  </div>
+  <%= form_with model: @recipes, url:recipes_path, scope: :recipe, method: :post, data: { turbo: false }, class: "form" do |form| %>
+    <div class="t">
+      <%= form.label :name %>
+      <%= form.text_field :name, placeholder: 'Name of the dish',  class: "form-control" %>
+    </div>
+    <div class="t">
+      <%= form.label :preparation_time %>
+      <%= form.text_field :preparation_time, placeholder: 'How long will it take to prep', class: "form-control" %>
+    </div>
+    <div class="t">
+      <%= form.label :cooking_time %>
+      <%= form.text_field :cooking_time, placeholder: 'How long will it take to cook', class: "form-control" %>
+    </div>
+    <div class="t">
+      <%= form.label :how_to.. %>
+      <%= form.text_area :description, placeholder: 'preparation and cooking steps', class: "form-control" %>
+    </div>
+    <div class="p">
+      <%= form.check_box :public, class: "form-check-input", type: "checkbox", id: "flexSwitchCheckDefault" %>
+      <%= form.label "Public", class: "form-check-label", for: "flexSwitchCheckDefault" %>
+    </div>
+    <div class="t">
+      <%= form.submit "submit", class: "add" %>
+    </div>
+  <% end %>
+  </div>
