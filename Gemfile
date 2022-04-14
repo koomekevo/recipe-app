@@ -35,6 +35,9 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
+
+gem 'cancancan'
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
@@ -50,8 +53,8 @@ gem 'sassc', '~> 2.1.0'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver', '>= 4.0.0.rc1'
+  gem 'capybara'
+  gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
