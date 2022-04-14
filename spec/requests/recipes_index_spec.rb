@@ -30,7 +30,6 @@ RSpec.describe 'Recipe Index Page', type: :feature do
       expect(page).to have_content 'food food.'
     end
 
-
     it 'When I click to Delete  button' do
       click_button 'Delete'
       expect(page).to have_current_path recipes_path
